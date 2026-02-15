@@ -322,6 +322,6 @@ await contentFilter.addPolicy({
 
 ---
 
-**OClawlaborator** - Secure, compliant, and scalable AI assistance for the modern workplace.
+**Clawlaborator** - Secure, compliant, and scalable AI assistance for the modern workplace.
 
 For more information, email me at darrell.mesa@pm-ss.org
