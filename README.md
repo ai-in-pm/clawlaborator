@@ -1,4 +1,4 @@
-# 🏢 OpenClaw Enterprise Edition
+# 🏢 "Clawlaborator" aka "OpenClaw" Enterprise Edition
 
 OpenClaw Enterprise Edition transforms the personal AI assistant into a secure, compliant, and scalable solution designed specifically for workplace environments.
 
