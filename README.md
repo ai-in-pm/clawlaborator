@@ -1,6 +1,6 @@
 # 🏢 "Clawlaborator" aka "OpenClaw" Enterprise Edition
 
-OpenClaw Enterprise Edition transforms the personal AI assistant into a secure, compliant, and scalable solution designed specifically for workplace environments.
+"Clawlaborator" aka "OpenClaw" Enterprise Edition transforms the personal AI assistant into a secure, compliant, and scalable solution designed specifically for workplace environments.
 
 ## 🚀 Quick Start
 
@@ -214,7 +214,9 @@ docker stats
 **Database connection errors**:
 ```bash
 # Verify PostgreSQL is running
-docker-compose -f docker-compose.enterprise.yml ps postgres
+docker-compose -f docker-compose.enterprise.yml ps postgres- **Documentation**: https://docs.openclaw.ai/enterprise
+- **Security Issues**: security@openclaw.ai
+- **Professional Services**: consulting@openclaw.ai
 
 # Check database connectivity
 docker-compose -f docker-compose.enterprise.yml exec postgres psql -U openclaw -d openclaw_enterprise -c "SELECT 1;"
@@ -232,10 +234,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 ## 📞 Support
 
 ### Enterprise Support Channels
-- **Email**: enterprise-support@openclaw.ai
-- **Documentation**: https://docs.openclaw.ai/enterprise
-- **Security Issues**: security@openclaw.ai
-- **Professional Services**: consulting@openclaw.ai
+- **Email**: darrell.mesa@pm-ss.org
 
 ### Health Checks
 ```bash
