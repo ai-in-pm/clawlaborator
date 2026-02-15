@@ -1,0 +1,100 @@
+{
+  "organization": {
+    "name": "Enterprise Corp",
+    "domain": "enterprise.com",
+    "adminEmail": "admin@enterprise.com",
+    "supportContact": "support@enterprise.com"
+  },
+  "security": {
+    "allowedDomains": [
+      "enterprise.com",
+      "partners.enterprise.com"
+    ],
+    "requireMFA": true,
+    "sessionTimeout": 3600,
+    "maxFailedAttempts": 3,
+    "passwordPolicy": {
+      "minLength": 12,
+      "requireUppercase": true,
+      "requireLowercase": true,
+      "requireNumbers": true,
+      "requireSpecialChars": true
+    },
+    "allowedChannels": [
+      "slack",
+      "teams",
+      "webchat"
+    ],
+    "dataRetention": {
+      "conversationDays": 90,
+      "logDays": 365,
+      "auditDays": 2555
+    }
+  },
+  "ai": {
+    "allowedModels": [
+      "claude-3-sonnet",
+      "gpt-4",
+      "gpt-4-turbo"
+    ],
+    "maxTokensPerRequest": 4000,
+    "maxRequestsPerHour": 100,
+    "contentFiltering": true,
+    "loggingEnabled": true
+  },
+  "compliance": {
+    "gdprEnabled": true,
+    "hipaaMode": false,
+    "soxCompliance": false,
+    "dataResidency": "us"
+  },
+  "deployment": {
+    "environment": "production",
+    "loadBalancing": true,
+    "highAvailability": true,
+    "backupStrategy": "daily"
+  },
+  "integrations": {
+    "slack": {
+      "enabled": true,
+      "botToken": "${SLACK_BOT_TOKEN}",
+      "signingSecret": "${SLACK_SIGNING_SECRET}",
+      "allowedWorkspaces": ["enterprise-corp"]
+    },
+    "teams": {
+      "enabled": true,
+      "appId": "${TEAMS_APP_ID}",
+      "appPassword": "${TEAMS_APP_PASSWORD}",
+      "tenantId": "${TEAMS_TENANT_ID}"
+    },
+    "email": {
+      "enabled": false,
+      "smtpHost": "smtp.enterprise.com",
+      "smtpPort": 587,
+      "secure": true,
+      "allowedDomains": ["enterprise.com"]
+    }
+  },
+  "monitoring": {
+    "metrics": {
+      "enabled": true,
+      "endpoint": "http://prometheus:9090"
+    },
+    "logging": {
+      "level": "info",
+      "elasticsearch": {
+        "enabled": true,
+        "host": "elasticsearch:9200"
+      }
+    },
+    "alerts": {
+      "enabled": true,
+      "channels": ["email", "slack"],
+      "thresholds": {
+        "errorRate": 0.05,
+        "responseTime": 5000,
+        "failedLogins": 10
+      }
+    }
+  }
+}
