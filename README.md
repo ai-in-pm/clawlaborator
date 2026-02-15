@@ -322,6 +322,6 @@ await contentFilter.addPolicy({
 
 ---
 
-**OpenClaw Enterprise Edition** - Secure, compliant, and scalable AI assistance for the modern workplace.
+**OClawlaborator** - Secure, compliant, and scalable AI assistance for the modern workplace.
 
-For more information, visit [docs.openclaw.ai/enterprise](https://docs.openclaw.ai/enterprise)
+For more information, email me at darrell.mesa@pm-ss.org
